@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    private val GRID_COLUMNS = 4
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, data)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         grid.adapter = adapter
-        grid.numColumns = 4
+        grid.numColumns = GRID_COLUMNS
         grid.columnWidth = GridView.AUTO_FIT
     }
 }
